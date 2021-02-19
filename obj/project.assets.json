@@ -12437,11 +12437,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tiago\\Desktop\\AnuncioWeb\\AnuncioWeb\\AnuncioWeb.csproj",
+      "projectUniqueName": "C:\\Users\\Tiago\\source\\Repos\\AnuncioWeb\\AnuncioWeb\\AnuncioWeb.csproj",
       "projectName": "AnuncioWeb",
-      "projectPath": "C:\\Users\\Tiago\\Desktop\\AnuncioWeb\\AnuncioWeb\\AnuncioWeb.csproj",
+      "projectPath": "C:\\Users\\Tiago\\source\\Repos\\AnuncioWeb\\AnuncioWeb\\AnuncioWeb.csproj",
       "packagesPath": "C:\\Users\\Tiago\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tiago\\Desktop\\AnuncioWeb\\AnuncioWeb\\obj\\",
+      "outputPath": "C:\\Users\\Tiago\\source\\Repos\\AnuncioWeb\\AnuncioWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -48,9 +48,9 @@ namespace AnuncioWeb.Controllers
         [HttpPut]
         public ActionResult Atualizar(int id, [FromBody]Anuncio anuncio)
         {
-      
+            anuncio.id = id;
             _banco.Anuncios.Update(anuncio);
-
+            _banco.SaveChanges();
             return Ok();
         }
 
@@ -60,7 +60,7 @@ namespace AnuncioWeb.Controllers
         public ActionResult Deletar(int id)
         {
             _banco.Anuncios.Remove(_banco.Anuncios.Find(id));
-
+            _banco.SaveChanges();
             return Ok();
         }
 

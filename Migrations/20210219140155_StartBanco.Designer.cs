@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnuncioWeb.Migrations
 {
     [DbContext(typeof(AnuncioContext))]
-    [Migration("20210218205703_startBanco")]
-    partial class startBanco
+    [Migration("20210219140155_StartBanco")]
+    partial class StartBanco
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

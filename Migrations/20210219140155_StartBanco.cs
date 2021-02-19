@@ -2,7 +2,7 @@
 
 namespace AnuncioWeb.Migrations
 {
-    public partial class startBanco : Migration
+    public partial class StartBanco : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

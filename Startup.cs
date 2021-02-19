@@ -13,7 +13,7 @@ namespace AnuncioWeb
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AnuncioContext>(opt => {
-                opt.UseSqlite("Data Source=Database\\Anuncio.db");
+                opt.UseSqlite("Data Source=Database\\tb_AnuncioWebmotors.db");
 
             });
             services.AddMvc();
