@@ -21,7 +21,9 @@ Body > JSON
  	"versao":"2.0",
  	"ano":2020,
  	"quilometragem":8000,
- 	"observacao":"Médio veículo"
+ 	"observacao":"Médio veículo",
+	"Ativo" true:,
+	"Criado":"2021-02-26"
  }
 
 

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace AnuncioWeb.Models
 {
@@ -27,6 +28,15 @@ namespace AnuncioWeb.Models
         
         [Required]
         public string observacao { get; set; }
+
+        public bool Ativo { get; set; }
+        
+        public DateTime Criado { get; set; }
+
+        public DateTime? Atualizado { get; set; }
+
+
+
 
     }
 }

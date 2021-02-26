@@ -3,14 +3,16 @@ using System;
 using AnuncioWeb.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AnuncioWeb.Migrations
 {
     [DbContext(typeof(AnuncioContext))]
-    partial class AnuncioContextModelSnapshot : ModelSnapshot
+    [Migration("20210226204035_AtualizacaoBD")]
+    partial class AtualizacaoBD
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
