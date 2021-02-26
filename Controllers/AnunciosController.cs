@@ -59,8 +59,10 @@ namespace AnuncioWeb.Controllers
         [HttpDelete]
         public ActionResult Deletar(int id)
         {
-            _banco.Anuncios.Remove(_banco.Anuncios.Find(id));
-            _banco.SaveChanges();
+            var anuncio = _banco.Anuncios.Find(id);
+            anuncio.Ativo = false;
+            _banco.Anuncios.Update(anuncio);
+
             return Ok();
         }
 
