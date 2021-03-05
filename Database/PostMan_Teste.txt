@@ -1,16 +1,15 @@
 ﻿GET
 ObterAnuncios
-
 https://localhost:44367/api/anuncios
+
 
 GET
 Obter_Anuncio_PorID
-
 https://localhost:44367/api/anuncios/1
+
 
 POST
 Cadastrar_Anuncio
-
 https://localhost:44367/api/anuncios
 
 Body > JSON
@@ -25,13 +24,10 @@ Body > JSON
 	"Ativo" true:,
 	"Criado":"2021-02-26"
  }
-
-
-
  
+
+
  PUT
-
-
  https://localhost:44367/api/anuncios/1
 
  {
