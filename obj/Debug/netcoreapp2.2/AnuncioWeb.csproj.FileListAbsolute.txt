@@ -26,3 +26,5 @@ C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\Anunci
 C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.RazorTargetAssemblyInfo.cache
 C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.dll
 C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.pdb
+C:\Users\Tiago Castro\Source\Repos\taccastro\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.dll
+C:\Users\Tiago Castro\Source\Repos\taccastro\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.pdb
