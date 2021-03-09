@@ -1,33 +1,3 @@
-C:\Users\Tiago\Desktop\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.csproj.CoreCompileInputs.cache
-C:\Users\Tiago\Desktop\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.RazorAssemblyInfo.cache
-C:\Users\Tiago\Desktop\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.RazorAssemblyInfo.cs
-C:\Users\Tiago\Desktop\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.AssemblyInfoInputs.cache
-C:\Users\Tiago\Desktop\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.AssemblyInfo.cs
-C:\Users\Tiago\Desktop\AnuncioWeb\AnuncioWeb\bin\Debug\netcoreapp2.2\AnuncioWeb.deps.json
-C:\Users\Tiago\Desktop\AnuncioWeb\AnuncioWeb\bin\Debug\netcoreapp2.2\AnuncioWeb.runtimeconfig.json
-C:\Users\Tiago\Desktop\AnuncioWeb\AnuncioWeb\bin\Debug\netcoreapp2.2\AnuncioWeb.runtimeconfig.dev.json
-C:\Users\Tiago\Desktop\AnuncioWeb\AnuncioWeb\bin\Debug\netcoreapp2.2\AnuncioWeb.dll
-C:\Users\Tiago\Desktop\AnuncioWeb\AnuncioWeb\bin\Debug\netcoreapp2.2\AnuncioWeb.pdb
-C:\Users\Tiago\Desktop\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.RazorTargetAssemblyInfo.cache
-C:\Users\Tiago\Desktop\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.dll
-C:\Users\Tiago\Desktop\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.pdb
-C:\Users\Tiago\Desktop\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.csprojAssemblyReference.cache
-C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\bin\Debug\netcoreapp2.2\AnuncioWeb.deps.json
-C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\bin\Debug\netcoreapp2.2\AnuncioWeb.runtimeconfig.json
-C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\bin\Debug\netcoreapp2.2\AnuncioWeb.runtimeconfig.dev.json
-C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\bin\Debug\netcoreapp2.2\AnuncioWeb.dll
-C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\bin\Debug\netcoreapp2.2\AnuncioWeb.pdb
-C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.csprojAssemblyReference.cache
-C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.csproj.CoreCompileInputs.cache
-C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.RazorAssemblyInfo.cache
-C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.RazorAssemblyInfo.cs
-C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.AssemblyInfoInputs.cache
-C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.AssemblyInfo.cs
-C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.RazorTargetAssemblyInfo.cache
-C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.dll
-C:\Users\Tiago\source\Repos\AnuncioWeb\AnuncioWeb\obj\Debug\netcoreapp2.2\AnuncioWeb.pdb
-C:\Users\Tiago Castro\Source\Repos\taccastro\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.dll
-C:\Users\Tiago Castro\Source\Repos\taccastro\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.pdb
 C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\bin\Debug\netcoreapp2.2\appsettings.Development.json
 C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\bin\Debug\netcoreapp2.2\appsettings.json
 C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\bin\Debug\netcoreapp2.2\AnuncioWeb.deps.json
@@ -44,3 +14,4 @@ C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\obj\Debug\netc
 C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.dll
 C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.pdb
 C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.genruntimeconfig.cache
+C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.csprojAssemblyReference.cache

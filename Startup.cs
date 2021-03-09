@@ -29,6 +29,7 @@ namespace AnuncioWeb
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStatusCodePages();
 
             app.UseMvc();
         }
