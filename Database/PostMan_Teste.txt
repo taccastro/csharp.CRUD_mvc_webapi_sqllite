@@ -38,3 +38,6 @@ Body > JSON
  	"quilometragem":85000,
  	"observacao":"Médio veículo"
  }
+
+ -- filtro data exemplo https://localhost:44367/api/anuncios?data=2021-03-08
+ -- filtro paginação exemplo https://localhost:44367/api/anuncios?pagNum=1&pagRegistro=2 

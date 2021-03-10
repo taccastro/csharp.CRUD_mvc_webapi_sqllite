@@ -1,7 +1,9 @@
 ﻿using AnuncioWeb.Database;
+using AnuncioWeb.Helpers;
 using AnuncioWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System;
 using System.Linq;
 
@@ -20,12 +22,32 @@ namespace AnuncioWeb.Controllers
         //APP /api/anuncios
         [HttpGet]
         [Route("")]
-        public ActionResult ObterAnuncios(DateTime? data)
+        public ActionResult ObterAnuncios([FromQuery] AnuncioUrlQuery query)
         {
             var item = _banco.Anuncios.AsQueryable();
-            if (data.HasValue)
+
+            if (query.Data.HasValue)
             {
-                item = item.Where(a => a.Criado > data.Value || a.Atualizado > data.Value );
+                item = item.Where(a => a.Criado > query.Data.Value || a.Atualizado > query.Data.Value);
+            }
+
+            if (query.PagNum.HasValue)
+            {
+                var quantidadeTotalRegistros = item.Count();
+                item = item.Skip((query.PagNum.Value - 1) * query.PagRegistro.Value).Take(query.PagRegistro.Value);
+
+                var paginacao = new Paginacao();
+                paginacao.NumeroPagina = query.PagNum.Value;
+                paginacao.RegistroPorPagina = query.PagRegistro.Value;
+                paginacao.TotalRegistros = quantidadeTotalRegistros;
+                paginacao.TotalPaginas = (int)Math.Ceiling((double)quantidadeTotalRegistros / query.PagRegistro.Value);
+
+                Response.Headers.Add("X-PAgination", JsonConvert.SerializeObject(paginacao));
+
+                if (query.PagNum > paginacao.TotalPaginas)
+                {
+                    return NotFound();
+                }
             }
             return Ok(item);
         }
@@ -69,7 +91,7 @@ namespace AnuncioWeb.Controllers
             anuncio.id = id;
             anuncio.Ativo = true;
 
-            
+
             _banco.Anuncios.Update(anuncio);
             _banco.SaveChanges();
             return Ok();
