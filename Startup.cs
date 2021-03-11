@@ -1,4 +1,6 @@
-﻿using AnuncioWeb.Database;
+﻿using AnuncioWeb.Contracts;
+using AnuncioWeb.Database;
+using AnuncioWeb.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -17,9 +19,11 @@ namespace AnuncioWeb
 
             });
             services.AddMvc();
+            services.AddScoped<IAnuncioRepository, AnuncioRepository>();
 
 
-                
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,4 +1,5 @@
-﻿using AnuncioWeb.Database;
+﻿using AnuncioWeb.Contracts;
+using AnuncioWeb.Database;
 using AnuncioWeb.Helpers;
 using AnuncioWeb.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -13,10 +14,11 @@ namespace AnuncioWeb.Controllers
     [Route("api/anuncios")]
     public class AnunciosController : ControllerBase
     {
-        private readonly AnuncioContext _banco;
-        public AnunciosController(AnuncioContext banco)
+        private readonly IAnuncioRepository _repository;
+
+        public AnunciosController(IAnuncioRepository repository)
         {
-            _banco = banco;
+            _repository = repository;
         }
 
         //APP /api/anuncios
@@ -24,32 +26,16 @@ namespace AnuncioWeb.Controllers
         [Route("")]
         public ActionResult ObterAnuncios([FromQuery] AnuncioUrlQuery query)
         {
-            var item = _banco.Anuncios.AsQueryable();
+            var item = _repository.ObterAnuncios(query);
 
-            if (query.Data.HasValue)
+            if (query.PagNum > item.Paginacao.TotalPaginas)
             {
-                item = item.Where(a => a.Criado > query.Data.Value || a.Atualizado > query.Data.Value);
+                return NotFound();
             }
 
-            if (query.PagNum.HasValue)
-            {
-                var quantidadeTotalRegistros = item.Count();
-                item = item.Skip((query.PagNum.Value - 1) * query.PagRegistro.Value).Take(query.PagRegistro.Value);
+            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(item.Paginacao));
 
-                var paginacao = new Paginacao();
-                paginacao.NumeroPagina = query.PagNum.Value;
-                paginacao.RegistroPorPagina = query.PagRegistro.Value;
-                paginacao.TotalRegistros = quantidadeTotalRegistros;
-                paginacao.TotalPaginas = (int)Math.Ceiling((double)quantidadeTotalRegistros / query.PagRegistro.Value);
-
-                Response.Headers.Add("X-PAgination", JsonConvert.SerializeObject(paginacao));
-
-                if (query.PagNum > paginacao.TotalPaginas)
-                {
-                    return NotFound();
-                }
-            }
-            return Ok(item);
+            return Ok(item.ToList());
         }
 
         //WEB -- /api/anuncios/1
@@ -57,12 +43,12 @@ namespace AnuncioWeb.Controllers
         [HttpGet]
         public ActionResult ObterAnuncioID(int id)
         {
-            var obj = _banco.Anuncios.Find(id);
+            var obj = _repository.Obter(id);
 
             if (obj == null)
                 return NotFound();
             //return StatusCode(404);
-            return Ok();
+            return Ok(obj);
         }
 
 
@@ -71,8 +57,7 @@ namespace AnuncioWeb.Controllers
         [HttpPost]
         public ActionResult Cadastrar([FromBody] Anuncio anuncio)
         {
-            _banco.Anuncios.Add(anuncio);
-            _banco.SaveChanges();
+            _repository.Cadastrar(anuncio);
 
             return Created($"/api/anuncios/{anuncio.id}", anuncio);
         }
@@ -83,17 +68,13 @@ namespace AnuncioWeb.Controllers
         public ActionResult Atualizar(int id, [FromBody] Anuncio anuncio)
         {
 
-            var obj = _banco.Anuncios.AsNoTracking().FirstOrDefault(a => a.id == id);
-
+            var obj = _repository.Obter(id);
             if (obj == null)
                 return NotFound();
-
+            
             anuncio.id = id;
-            anuncio.Ativo = true;
-
-
-            _banco.Anuncios.Update(anuncio);
-            _banco.SaveChanges();
+            _repository.Atualizar(anuncio);
+          
             return Ok();
         }
 
@@ -102,14 +83,12 @@ namespace AnuncioWeb.Controllers
         [HttpDelete]
         public ActionResult Deletar(int id)
         {
-            var anuncio = _banco.Anuncios.Find(id);
+            var anuncio = _repository.Obter(id);
 
             if (anuncio == null)
                 return NotFound();
 
-            anuncio.Ativo = false;
-            _banco.Anuncios.Update(anuncio);
-            _banco.SaveChanges();
+            _repository.Deletar(id);
 
             return NoContent();
         }
