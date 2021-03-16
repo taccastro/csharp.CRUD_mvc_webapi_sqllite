@@ -1,11 +1,11 @@
 ﻿using AnuncioWeb.Contracts;
-using AnuncioWeb.Database;
 using AnuncioWeb.Helpers;
 using AnuncioWeb.Models;
+using AnuncioWeb.Models.DTO;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace AnuncioWeb.Controllers
@@ -14,11 +14,15 @@ namespace AnuncioWeb.Controllers
     [Route("api/anuncios")]
     public class AnunciosController : ControllerBase
     {
-        private readonly IAnuncioRepository _repository;
+        private readonly IAnuncioRepository _repository;        
+        
+        private readonly IMapper _mapper;
 
-        public AnunciosController(IAnuncioRepository repository)
+
+        public AnunciosController(IAnuncioRepository repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
         }
 
         //APP /api/anuncios
@@ -48,9 +52,17 @@ namespace AnuncioWeb.Controllers
             if (obj == null)
                 return NotFound();
             //return StatusCode(404);
-            return Ok(obj);
-        }
 
+            AnuncioDTO anuncioDTO = _mapper.Map<Anuncio, AnuncioDTO>(obj);
+
+            anuncioDTO.Links = new List<LinkDTO>();
+
+            anuncioDTO.Links.Add(
+                new LinkDTO("self", $"https://localhost:44367/api/anuncios/{anuncioDTO.id}", "GET"));
+
+            return Ok(anuncioDTO);
+
+        }
 
         // --api/anuncios(POST: marca, modelo, versao, ano, km, obs)
         [Route("")]

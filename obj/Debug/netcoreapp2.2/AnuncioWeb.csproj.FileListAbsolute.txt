@@ -18,7 +18,6 @@ C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\bin\Debug\netc
 C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\bin\Debug\netcoreapp2.2\AnuncioWeb.runtimeconfig.dev.json
 C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\bin\Debug\netcoreapp2.2\AnuncioWeb.dll
 C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\bin\Debug\netcoreapp2.2\AnuncioWeb.pdb
-C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.csprojAssemblyReference.cache
 C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.AssemblyInfoInputs.cache
 C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.AssemblyInfo.cs
 C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.csproj.CoreCompileInputs.cache
@@ -28,3 +27,4 @@ C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\obj\Debug\netc
 C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.dll
 C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.pdb
 C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.genruntimeconfig.cache
+C:\Users\Tiago Castro\source\repos\GitHub\mvc.WebAPI.SQLLite.Crud\obj\Debug\netcoreapp2.2\AnuncioWeb.csprojAssemblyReference.cache
