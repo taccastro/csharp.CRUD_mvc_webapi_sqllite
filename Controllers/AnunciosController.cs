@@ -14,8 +14,8 @@ namespace AnuncioWeb.Controllers
     [Route("api/anuncios")]
     public class AnunciosController : ControllerBase
     {
-        private readonly IAnuncioRepository _repository;        
-        
+        private readonly IAnuncioRepository _repository;
+
         private readonly IMapper _mapper;
 
 
@@ -42,9 +42,8 @@ namespace AnuncioWeb.Controllers
             return Ok(item.ToList());
         }
 
-        //WEB -- /api/anuncios/1
-        [Route("{id}")]
-        [HttpGet]
+        //WEB -- /api/anuncios/1     
+        [HttpGet("{id}", Name = "ObterAnuncio")]
         public ActionResult ObterAnuncioID(int id)
         {
             var obj = _repository.Obter(id);
@@ -58,7 +57,13 @@ namespace AnuncioWeb.Controllers
             anuncioDTO.Links = new List<LinkDTO>();
 
             anuncioDTO.Links.Add(
-                new LinkDTO("self", $"https://localhost:44367/api/anuncios/{anuncioDTO.id}", "GET"));
+                new LinkDTO("self", Url.Link("ObterAnuncio", new { id = anuncioDTO.id }), "GET"));
+
+            anuncioDTO.Links.Add(
+               new LinkDTO("update", Url.Link("AtualizarAnuncio", new { id = anuncioDTO.id }), "UPDATE"));
+
+            anuncioDTO.Links.Add(
+               new LinkDTO("delete", Url.Link("ExcluirAnuncio", new { id = anuncioDTO.id }), "DELETE"));
 
             return Ok(anuncioDTO);
 
@@ -75,24 +80,22 @@ namespace AnuncioWeb.Controllers
         }
 
         // --api/anuncios/1 (PUT: id, marca, modelo, versao, ano, km, obs)
-        [Route("{id}")]
-        [HttpPut]
+        [HttpPut("{id}", Name = "AtualizarAnuncio")]
         public ActionResult Atualizar(int id, [FromBody] Anuncio anuncio)
         {
 
             var obj = _repository.Obter(id);
             if (obj == null)
                 return NotFound();
-            
+
             anuncio.id = id;
             _repository.Atualizar(anuncio);
-          
+
             return Ok();
         }
 
-        // --/api/anuncios/1 (DELETE)
-        [Route("{id}")]
-        [HttpDelete]
+        // --/api/anuncios/1 (DELETE)       
+        [HttpDelete("{id}", Name = "ExcluirAnuncio")]
         public ActionResult Deletar(int id)
         {
             var anuncio = _repository.Obter(id);

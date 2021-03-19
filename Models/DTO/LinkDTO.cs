@@ -12,7 +12,7 @@
         {
             Rel = rel;
             Href = href;
-            method = Method;
+            Method = method;
         }
     }
 }
