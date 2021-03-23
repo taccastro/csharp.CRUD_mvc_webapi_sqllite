@@ -32,14 +32,21 @@ namespace AnuncioWeb.Controllers
         {
             var item = _repository.ObterAnuncios(query);
 
-            if (query.PagNum > item.Paginacao.TotalPaginas)
-            {
+            if (item.Count == 0)
                 return NotFound();
-            }
 
+            if(item.Paginacao != null)
             Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(item.Paginacao));
 
-            return Ok(item.ToList());
+            var lista = _mapper.Map<PaginationList<Anuncio>, PaginationList<AnuncioDTO>>(item);
+
+            foreach (var anuncio in lista)
+            {
+                anuncio.Links = new List<LinkDTO>();
+                anuncio.Links.Add(new LinkDTO("self", Url.Link("ObterAnuncio", new { id = anuncio.id }), "GET"));
+            }
+
+            return Ok(lista);
         }
 
         //WEB -- /api/anuncios/1     
