@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ql9thzsWn1tt+FFLCpB7E5MVuI9aK6aTFw9TwR6BVSFLgVZ3zxQRfrwTxvCs5oFiFPx0blBCLdVvMQe3xehUWA==",
+  "dgSpecHash": "bQJqYYwJwO/TJ30tFtBfOCOnxNhoqRUWcUc/UAzuWqbEL0CVqRjD7n3QVdibgwmQnfC76Nyld1gfVnBvNq92cA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tiago Castro\\source\\repos\\GitHub\\mvc.WebAPI.SQLLite.Crud\\AnuncioWeb.csproj",
+  "projectFilePath": "C:\\Users\\Tiago Castro\\Source\\Repos\\mvc.WebAPI.SQLLite.Crud\\Cadastro_Anuncio_Carrros_WebMotors.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tiago Castro\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Tiago Castro\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
